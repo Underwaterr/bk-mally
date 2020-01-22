@@ -7,7 +7,7 @@ app.use((request, response, next)=> {
   next()
 })
 
-app.get('/cat', (request, response)=> {
+app.get('/cats', (request, response)=> {
   response.json([
     { name: "Fluffy", isCute: true },
     { name: "Whiskers", isCute: true },
