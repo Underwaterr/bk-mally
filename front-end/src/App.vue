@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <ul>
-      <li v-for="beer in beers"> {{beer.name}} </li>
+      <li v-for="cat in cats"> {{cat.name}} </li>
     </ul>
   </div>
 </template>
@@ -10,13 +10,13 @@
 export default {
   data() {
     return {
-      beers: []
+      cats: []
     }
   },
   created() {
-    fetch('https://api.punkapi.com/v2/beers')
+    fetch('https://localhost:9000/cats')
       .then(response=> response.json())
-      .then(data=> this.beers = data)
+      .then(data=> this.cats = data)
   }
 }
 </script>
